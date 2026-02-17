@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="container">
+        <h1>Controle Financeiro</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="card">
+            <form id="form-gasto">
+
+                <select id="tipo" required>
+                    <option value="">Selecione</option>
+                    <option value="entrada">Entrada</option>
+                    <option value="saida">Saída</option>
+                </select>
+
+                <input type="text" id="descricao" placeholder="Descrição" required>
+
+                <input type="number" id="valor" placeholder="Valor" required>
+
+                <input type="date" id="data" required>
+
+                <button type="submit">Adicionar</button>
+
+            </form>
+        </section>
+
+        <section class="resumo">
+
+            <div class="card">
+                <canvas id="graficoMensal"></canvas>
+            </div>
+
+            <div class="totais">
+                <div class="total-card entrada">
+                    <h4>Entradas</h4>
+                    <p>R$ <span id="total-entrada">0.00</span></p>
+                </div>
+
+                <div class="total-card saida">
+                    <h4>Saídas</h4>
+                    <p>R$ <span id="total-saida">0.00</span></p>
+                </div>
+
+                <div class="total-card saldo">
+                    <h4>Saldo</h4>
+                    <p>R$ <span id="saldo">0.00</span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <ul id="lista-gastos"></ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="ano"></span> Todos os direitos reservados à Carlos Correia.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

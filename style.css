@@ -1,0 +1,165 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-entrada: #4caf50;
+    --cor-saida: #f44336;
+    --cor-saldo: #2196f3;
+    --cor-card: rgba(255, 255, 255, 0.95);
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        rgba(10, 15, 30, 0.85),
+        rgba(10, 15, 30, 0.9)
+    );
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container,
+.resumo {
+    width: 100%;
+    max-width: 900px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card {
+    background: var(--cor-card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+form input,
+form select,
+form button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    flex: 1 1 150px;
+    font-size: 14px;
+}
+
+form button {
+    background: var(--cor-entrada);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    opacity: 0.9;
+}
+
+.resumo {
+    display: grid;
+    gap: 20px;
+}
+
+.totais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.total-card {
+    background: var(--cor-card);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.total-card h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.total-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.entrada {
+    border-top: 4px solid var(--cor-entrada);
+}
+
+.saida {
+    border-top: 4px solid var(--cor-saida);
+}
+
+.saldo {
+    border-top: 4px solid var(--cor-saldo);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+li span {
+    flex: 1;
+    word-break: break-word;
+}
+
+li button {
+    background: var(--cor-saida);
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+canvas {
+    width: 100% !important;
+    max-height: 300px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    color: rgba(241, 78, 78, 0.8);
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    form {
+        flex-wrap: nowrap;
+    }
+}
