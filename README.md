@@ -44,3 +44,5 @@ A interface é totalmente responsiva e se adapta a diferentes tamanhos de tela �
 ## 📄 Licença
 
 © 2025 Todos os direitos reservados à **Carlos Correia**.
+<img width="1146" height="863" alt="Captura de tela 2026-02-20 171401" src="https://github.com/user-attachments/assets/c5ca2c48-0f2f-45d0-acbe-033d6e30b38f" />
+
